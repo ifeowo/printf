@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * _printf - produces output according to a format
+ * @format: identifier to look for.
  * Return: length of the formatted output string
  */
 int _printf(const char *format, ...)
@@ -31,7 +32,8 @@ pfunc = get_print(*p);
 count += (pfunc)
 ? pfunc(arguments, &flags)
 : _printf("%%%c", *p);
-} else
+}
+else
 count += _putchar(*p);
 }
 _putchar(-1);
